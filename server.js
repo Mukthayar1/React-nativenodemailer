@@ -6,7 +6,7 @@ const nodemailer = require('nodemailer')
 
 dotenv.config({ path: './config.env' });
 
-
+const Port = process.env.Port || 8000;
 
 
 
@@ -70,6 +70,6 @@ app.post('/sendMail', (req, res) => {
   })
 })
 
-app.listen(7000, () => {
+app.listen(Port, () => {
   console.log('Listening on port 7000')
 })
